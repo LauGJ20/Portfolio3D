@@ -1,98 +1,63 @@
 # 🌸 Portfolio 3D Interactivo — Laura García Jancko
 
-Portfolio personal desarrollado con **Three.js** y **Blender**, presentado como una habitación 3D interactiva con estética *dopamine/melocotón*.
+Portfolio personal desarrollado con **Three.js** y **Blender**, presentado como una habitación 3D interactiva.
 
 ---
 
-## 🗂️ Estructura del repositorio
+## 🗂️ Estructura
 
 ```
 /
-├── index.html              # Página principal
-├── main.js                 # Lógica Three.js e interactividad
-├── style.css               # Estilos y UI
-├── README.md               # Este archivo
+├── index.html
+├── main.js
+├── style.css
 ├── models/
-│   └── Habitacion3D.glb    # Modelo 3D de la habitación (Blender)
+│   └── Habitacion3D.glb
 ├── img/
-│   ├── yo.png              # Retrato para el diálogo otome
-│   ├── gato.png            # Imagen del gato (opcional)
+│   ├── yo.png
 │   └── proyectos/
-│       ├── Cocina.jpg
-│       ├── PusheenGamer.jpg
-│       ├── CasaEncantada_copia.jpg
-│       ├── CasaGnomo.jpg
-│       └── Habitacion.jpg
 └── PortfolioWeb/
-    └── index.html          # Web portfolio (cargada en MONITOR2 como iframe)
+    └── index.html
 ```
 
 ---
 
-## 🚀 Despliegue local
+## 🚀 Ejecutar en local
 
-Este proyecto usa Three.js con carga de archivos GLB, por lo que **no puede abrirse directamente como `file://`**. Es necesario servirlo con un servidor local.
+Requiere servidor local (no funciona con `file://`):
 
-### Opción 1 — Python (recomendado)
 ```bash
 python3 -m http.server 8000
 ```
-Abre en el navegador: [http://localhost:8000](http://localhost:8000)
-
-### Opción 2 — Node.js
-```bash
-npx serve .
-```
-
-### Opción 3 — VS Code
-Instala la extensión **Live Server** y haz clic en *Go Live*.
+Abre [http://localhost:8000](http://localhost:8000)
 
 ---
 
-## 🌐 Despliegue en GitHub Pages
+## 🌐 GitHub Pages
 
-1. Sube todos los archivos al repositorio en la rama `main`.
-2. Ve a **Settings → Pages**.
-3. En *Source*, selecciona la rama `main` y carpeta `/root`.
-4. GitHub Pages publicará la web en: `https://<usuario>.github.io/<repositorio>/`
-
-> ⚠️ Asegúrate de que el archivo `Habitacion3D.glb` está subido — puede tardar por su tamaño.
+1. Sube todos los archivos a la rama `main`
+2. Ve a **Settings → Pages → Source → main**
+3. La web se publicará en `https://<usuario>.github.io/<repositorio>/`
 
 ---
 
-## 🎮 Cómo navegar
+## 🎮 Controles
 
 | Acción | Resultado |
 |---|---|
-| **Arrastrar** con el ratón | Rotar la cámara |
-| **Scroll** | Zoom |
-| **Click en MONITOR** | Abre el portfolio (LAU OS) |
-| **Click en MONITOR2** | Abre la web portfolio en iframe |
-| **Click en MIPERSONAJE** | Diálogo otome con información sobre mí |
-| **Click en GATO** | 🐱 Miau |
-| **Click en ARTSTATION** | Abre ArtStation |
-| **Click en LINKEDIN** | Abre LinkedIn |
-| **Click en GMAIL** | Abre cliente de correo |
-| **Botón ☀️/🌙** | Alterna entre modo día y noche |
-| **ESC** | Cierra cualquier ventana abierta |
+| Arrastrar | Rotar cámara |
+| Scroll | Zoom |
+| Click en objetos | Interactuar |
+| Botón ☀️/🌙 | Modo día / noche |
+| ESC | Cerrar ventanas |
 
 ---
 
 ## 🛠️ Tecnologías
 
-- [Three.js r158](https://threejs.org/) — Motor 3D WebGL
+- [Three.js](https://threejs.org/) — Motor 3D WebGL
 - [Blender](https://www.blender.org/) — Modelado y exportación GLB
 - HTML5 / CSS3 / JavaScript vanilla
-- Fuentes: Baloo 2, Nunito, Press Start 2P (Google Fonts)
-
----
-
-## ✏️ Comentarios técnicos
-
-- El modelo se exporta desde Blender en formato **GLB** (binario embebido), lo que incluye geometría, materiales y texturas en un solo archivo.
-- La iluminación es completamente dinámica: luz ambiental, direccional (sol) y tres point lights con transición suave día/noche mediante lerp.
-- El sistema de clicks usa un **Raycaster** de Three.js que recorre el árbol de objetos de la escena y sube por los nodos padre para identificar objetos interactivos.
-- El diálogo otome tiene un sistema de nodos con ramificación y typewriter effect.
 
 ---
 
