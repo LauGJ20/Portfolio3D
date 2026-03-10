@@ -1,0 +1,577 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+
+
+
+
+/* --------------------------- ESTILOS GENERALES --------------------------- */
+        body {
+            background-color: #202020;
+            color: rgb(220, 220, 220); /* Texto */
+            font-family: 'Montserrat', sans-serif;
+            margin:0;
+        }
+
+        h2 {
+            font-family: 'Anta', sans-serif;
+            text-shadow: 0 0 1px rgb(255, 255, 255);
+        }
+
+        strong {
+            color: rgb(196, 5, 62);
+            text-shadow: 0 0 6px rgb(196, 5, 62);
+            font-family: 'Audiowide', sans-serif;
+            font-size: larger;
+        }
+
+        a {
+            color: rgb(196, 5, 62);
+        }
+
+        #projects, #contact {
+            background-color: #343434;
+        }
+
+        #contact {
+            border-style: solid none solid none;
+            border-color: rgb(196, 5, 62);
+        }
+
+
+
+        /* Barra de navegación */
+        nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color:#202020;
+        display: flex;
+        }
+
+        nav ul li a {
+        display: block;
+        color: rgb(220, 220, 220);
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+
+        nav ul li a:hover {
+        background-color: #111111;
+        color: rgb(196, 5, 62);
+        }
+
+
+
+
+        /* BUTTON CONTACTO */
+        .btn-contact {
+            display: inline-block;
+            background-color: #202020;
+
+            border-radius: 10px;
+            border: 4px solid rgb(196, 5, 62);
+
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 17px;
+            cursor: pointer;
+
+            margin-top: 20px;
+        }
+
+        .btn-contact span {
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .btn-contact span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            right: -50px;
+            transition: 0.5s;
+        }
+
+        .btn-contact:hover {
+            background-color: rgb(196, 5, 62);
+            color: black;
+        }
+
+        .btn-contact:hover span {
+            padding-right: 30px;
+        }
+
+        .btn-contact:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+/* --------------------------- HEADER (PORTADA) --------------------------- */
+        header {
+            height: 100vh; /* Ocupa toda la altura de la pantalla */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(180deg, #5c5c5c, #000000); /* Fondo con degradado */
+            padding: 0 20px;
+        }
+
+        #presentation h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        #presentation p {
+            max-width: 600px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        /* Ajuste del menú de navegación */
+        nav {
+            position: absolute;
+            top: 30px; /* Distancia desde arriba */
+            right: 30px; /* Distancia desde la derecha */
+        }
+
+        nav ul {
+            display: flex;
+            gap: 15px; /* Espaciado entre los enlaces */
+            background: transparent;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: rgb(220, 220, 220);
+            text-decoration: none;
+            
+            border-radius: 2px;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: rgb(34, 34, 34);
+            color: rgb(196, 5, 62);
+        }
+
+/* --------------------------- SECCIÓN SOBRE MÍ --------------------------- */
+#about {
+    background-color: #2a2a2a;
+    padding: 80px 20px;
+    text-align: center;
+    border-top: 3px solid rgb(196, 5, 62);
+    border-bottom: 3px solid rgb(196, 5, 62);
+}
+
+#about h2 {
+    font-family: 'Anta', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    color: rgb(220, 220, 220);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.245);
+}
+
+#about p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgb(210, 210, 210);
+    background-color: #202020;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(196, 5, 62, 0.2);
+}
+
+
+
+/* --------------------------- SECCIÓN PROGRAMAS --------------------------- */
+#skills {
+    background-color: #202020;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#skills h2 {
+    font-family: 'Anta', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: rgb(220, 220, 220);
+}
+
+#skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+#skills li {
+    background-color: #2a2a2a;
+    border: 2px solid rgb(196, 5, 62);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#skills li:hover {
+    background-color: rgb(196, 5, 62);
+    color: black;
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(196, 5, 62, 0.6);
+}
+
+
+
+
+
+
+/* --------------------------- SECCIÓN PROYECTOS --------------------------- */
+
+        #projects {
+            padding: 40px 100px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* GRID */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        /* PROYECTO */
+        .project {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease; /* Transición del artículo completo */
+        }
+
+        /* Hover mueve todo */
+        .project:hover {
+            transform: translateY(-20px);
+        }
+
+        /* Enlace dentro del artículo */
+        .project-link {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgb(196, 5, 62);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .project:hover .project-link {
+            opacity: 1;
+            transform: translateX(-50%) translateY(-5px);
+            pointer-events: auto;
+        }
+
+        /* Imagen */
+        .project img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Título centrado encima */
+        .project h3 {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-shadow: 0 0 5px rgb(0, 0, 0);
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+
+        /* Oscurecimiento de imagen */
+        .project::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(59, 0, 0, 0.393);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .project:hover::after {
+            opacity: 1;
+        }
+
+
+
+
+
+/* --------------------------- SECCIÓN EXPERIENCIA - TIMELINE --------------------------- */
+        #experience {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        #experience h2 {
+            font-family: 'Anta', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 40px;
+
+        }
+
+        /* Timeline structure */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background-color: rgb(196, 5, 62);
+            transform: translateX(-50%);
+        }
+
+        /* Timeline item */
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 20px 30px;
+            box-sizing: border-box;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            top: 25px;
+            width: 20px;
+            height: 20px;
+            background-color: rgb(196, 5, 62);
+            border-radius: 50%;
+        }
+
+        .timeline-item:nth-child(odd)::before {
+            right: -10px;
+        }
+
+        .timeline-item:nth-child(even)::before {
+            left: -10px;
+        }
+
+        .timeline-item strong {
+            color: white;
+            text-shadow: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+        }
+        .timeline-item h3 {
+            font-size: 1.3rem;
+            color: rgb(196, 5, 62);
+        }
+
+
+
+
+        @media screen and (max-width: 768px) {
+    .timeline::before {
+        left: 8px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 40px;
+        text-align: left;
+    }
+
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+
+    .timeline-item::before {
+        left: 0;
+    }
+}
+
+/* --------------------------- SECCIÓN CONTACTO --------------------------- */
+        #contact {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #2a2a2a;
+            border-top: 3px solid rgb(196, 5, 62);
+            border-bottom: 3px solid rgb(196, 5, 62);
+        }
+
+        #contact h2 {
+            font-family: 'Anta', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: rgb(220, 220, 220);
+        }
+
+        #contact p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        #contact a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        #contact a.mail {
+            color: rgb(196, 5, 62);
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        #contact a:hover {
+            color: white;
+        }
+
+        /* Redes sociales como lista horizontal */
+        #contact ul {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 0;
+            list-style-type: none;
+            margin-top: 20px;
+        }
+
+        #contact ul li a {
+            display: inline-block;
+            font-size: 1.2rem;
+            padding: 10px 14px;
+            border-radius: 8px;
+            background-color: #202020;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        #contact ul li a:hover {
+            background-color: rgb(196, 5, 62);
+            color: rgb(255, 255, 255);
+            transform: translateY(-3px);
+        }
+
+
+
+        /* --------------------------- FOOTER --------------------------- */
+        footer {
+            background-color: #202020;
+            padding: 25px 15px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgb(180, 180, 180);
+            letter-spacing: 0.5px;
+        }
+
+        footer span {
+            color: rgb(196, 5, 62);
+            font-weight: bold;
+        }
+
+
+
+
+
+
+
+
+ /* Modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background: #202020;
+    padding: 20px;
+    max-width: 600px;
+    border: 3px solid rgb(196, 5, 62);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.4s ease;
+}
+
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: rgb(196, 5, 62);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px);}
+    to { opacity: 1; transform: translateY(0);}
+}
